@@ -5,42 +5,52 @@
     <title>Title</title>
     <link rel="stylesheet" href="swiper-3.4.2.min.css">
     <style>
-        .swiper-container {
-            width: 600px;
-            height: 300px;
-        }
         li{
-            list-style: none;
+            list-style: none!important;
             width: 300px;
             overflow: hidden;
         }
         a{
-            text-decoration: none;
-            font-size: 14px;
+            text-decoration: none!important;
             color: #000;
             padding: 0 10px;
             width:auto!important;
+
+            -moz-user-select:none;/*火狐*/
+
+            -webkit-user-select:none;/*webkit浏览器*/
+
+            -ms-user-select:none;/*IE10*/
+
+            -khtml-user-select:none;/*早期浏览器*/
+
+            user-select:none;
         }
-        .swiper-wrapper div{
+        .swiper-wrapper::after{
+            content: "";
+            display: inline-block;
             border: 1px solid red;
-            height: 40px;
+            margin-right: 3px ;
         }
+
     </style>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-<div class="box1 swiper-container-horizontal" style="max-width:400px;overflow: hidden;height: 60px;margin: 100px auto">
-    <div class="swiper-wrapper" style="max-height: 22px">
-        <a class="swiper-slide" href="#爱情">爱情</a>
-        <a class="swiper-slide" href="#动画">动画</a>
-        <a class="swiper-slide" href="#动作">动作</a>
-        <a class="swiper-slide" href="#剧情">剧情</a>
-        <a class="swiper-slide" href="#科幻">科幻</a>
-        <a class="swiper-slide" href="#恐怖">恐怖</a>
-        <a class="swiper-slide" href="#冒险">冒险</a>
-        <a class="swiper-slide" href="#喜剧">喜剧</a>
-        <a class="swiper-slide" href="#悬疑">悬疑</a>
-        <a class="swiper-slide" href="#院线">院线</a>
-        <a class="swiper-slide" href="#其他" style="border-right: 2px  solid red;">其他</a>
+
+<div class="box1 swiper-container-horizontal row" style="max-width:400px;overflow: hidden;margin: 200px auto">
+    <div class="swiper-wrapper" style="max-height: 40px">
+        <a class="swiper-slide col-md-1  btn btn-default" href="#爱情">爱情</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#动画">动画</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#动作">动作</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#剧情">剧情</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#科幻">科幻</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#恐怖">恐怖</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#冒险">冒险</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#喜剧">喜剧</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#悬疑">悬疑</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#院线">院线</a>
+        <a class="swiper-slide col-md-1 btn btn-default" href="#其他" >其他</a>
     </div>
 </div>
 
